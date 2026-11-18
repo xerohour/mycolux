@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#04060f">
+  <title>MYCOLUX – Remake by NIKOMEDIA 2026</title>
+  <meta name="description" content="Ein Schattenwurm kriecht durch einen leuchtenden Pilzwald: Als kleiner Waldgeist mit Laternenstab schießt du ihn Glied für Glied ab, bevor er dich erreicht. Weberspinne, Sporenkäfer und Nachtskorpion machen es nicht leichter. Originalgetreu wie am Automaten von 1981 oder als moderne 3D-Version mit Soundtrack. Kostenlos im Browser.">
+  <link rel="canonical" href="https://nikomedia.at/games/mycolux/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NIKOMEDIA">
+  <meta property="og:locale" content="de_AT">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:url" content="https://nikomedia.at/games/mycolux/">
+  <meta property="og:title" content="MYCOLUX – Remake by NIKOMEDIA 2026">
+  <meta property="og:description" content="Halte den Leuchtwald hell: Ein Schattenwurm windet sich durch das Pilzfeld, jeder Treffer teilt ihn. Wie am Automaten von 1981 oder als moderne 3D-Version mit Glühwürmchen, Power-ups und Soundtrack.">
+  <meta property="og:image" content="https://nikomedia.at/games/mycolux/assets/share.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MYCOLUX: links die Pixel-Version im Stil von 1981, rechts die moderne 3D-Version mit leuchtenden Pilzen und dem Schattenwurm.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MYCOLUX – Remake by NIKOMEDIA 2026">
+  <meta name="twitter:description" content="Ein Schattenwurm im leuchtenden Pilzwald: wie 1981 oder als moderne 3D-Version. Kostenlos im Browser spielen.">
+  <meta name="twitter:image" content="https://nikomedia.at/games/mycolux/assets/share.jpg">
+  <meta name="twitter:image:alt" content="MYCOLUX: Pixel-Version im Stil von 1981 und moderne 3D-Version nebeneinander.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/modern.css">
+  <script type="importmap">
+  { "imports": { "three": "./js/lib/three/build/three.module.js", "three/addons/": "./js/lib/three/examples/jsm/" } }
+  </script>
+</head>
+<body>
+  <!--
+    MYCOLUX – Remake by NIKOMEDIA 2026
+    A homage to the mushroom-field shooter by Dona Bailey and Ed Logg (1981). Non-commercial fan project.
+    Name, characters, graphics, sounds and music are original creations.
+  -->
+  <div id="app">
+    <canvas id="gl" class="layer hidden" aria-hidden="true"></canvas>
+    <div id="orig-wrap" class="layer hidden">
+      <div class="cab-side left" aria-hidden="true"><div class="art"></div></div>
+      <div class="cab-monitor"><canvas id="orig" aria-label="MYCOLUX"></canvas></div>
+      <div class="cab-side right" aria-hidden="true"><div class="art"></div></div>
+    </div>
+    <div id="hud" class="layer hidden"></div>
+    <div id="ui" class="layer"></div>
+    <div id="touchbar" class="hidden">
+      <button type="button" data-act="pause" aria-label="Pause">❚❚</button>
+      <button type="button" data-act="menu">MENÜ</button>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div id="fade"></div>
+  </div>
+
+  <script src="js/core.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/music_meta.js"></script>
+  <script src="js/scores.js"></script>
+  <script src="js/sprites.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/autopilot.js"></script>
+  <script src="js/view_original.js"></script>
+  <script src="js/mode_original.js"></script>
+  <script src="js/mode_modern.js"></script>
+  <script src="js/select.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

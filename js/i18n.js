@@ -1,0 +1,175 @@
+// German and English texts. The browser language is the default, L or the DE/EN buttons switch.
+'use strict';
+
+(function (MYX) {
+  var T = {
+    de: {
+      langName: 'DEUTSCH',
+      tagline: 'Halte den Leuchtwald hell. Von oben kriecht der Schattenwurm.',
+      versionTitle: 'WÄHLE DEINE VERSION',
+      versionOriginal: 'ORIGINAL',
+      versionOriginalSub: 'Wie am Automaten von 1981: Pixelgrafik im Hochformat, Sound-Chip-Klänge, jede Welle in neuen Farben.',
+      versionModern: 'MODERN',
+      versionModernSub: 'Derselbe Wald in 3D: leuchtende Pilze, Nebel und Glühwürmchen, Power-ups, Kombos und ein eigener Soundtrack.',
+      best: 'BESTWERT',
+      remake: 'Remake by NIKOMEDIA 2026',
+      homage: 'Eine Hommage an den Pilzfeld-Shooter von Dona Bailey und Ed Logg (1981). Nicht-kommerzielles Fan-Projekt, Name, Figuren, Grafiken, Klänge und Musik sind eigene Schöpfungen.',
+      soundOn: 'TON AN', soundOff: 'TON AUS',
+      crtOn: 'BILDRÖHRE AN', crtOff: 'BILDRÖHRE AUS',
+      paused: 'PAUSE',
+      pressStart: 'FEUER ZUM STARTEN',
+      tapToStart: 'TIPPEN ZUM STARTEN',
+      clickToStart: 'KLICKEN ZUM STARTEN',
+      highScores: 'BESTENLISTE',
+      copyright: '© NIKOMEDIA 2026',
+      gameOver: 'GAME OVER',
+      player: 'SPIELER',
+      wave: 'WELLE',
+      ready: 'LOS!',
+      enterName: 'DEIN NAME',
+      newRecord: 'NEUER REKORD!',
+      bonus: 'BONUS',
+      loading: 'LADE …',
+      modernFail: 'Die moderne Version konnte nicht geladen werden',
+      modernFailHelp: 'Dein Browser stellt gerade keine 3D-Grafik (WebGL 2) bereit. Meist hilft es, den Browser neu zu starten oder in seinen Einstellungen die Hardwarebeschleunigung einzuschalten. Die Original-Version läuft auch ohne 3D.',
+      modernFailOriginal: 'ORIGINAL SPIELEN',
+      modernFailBack: 'ZURÜCK',
+      // original attract screens (pixel font, max 28 characters)
+      oScores: 'PUNKTE',
+      oWorm: 'SCHATTENWURM',
+      oHead: 'KOPF',
+      oBody: 'GLIED',
+      oSpider: 'WEBERSPINNE',
+      oBeetle: 'SPORENKÄFER',
+      oScorp: 'NACHTSKORPION',
+      oMush: 'PILZ',
+      oBonus: 'BONUS JE 12000',
+      oDemo: 'DEMO',
+      oPress: 'FEUER = START',
+      oTap: 'TIPPEN = START',
+      // menu
+      menuTitle: 'MENÜ',
+      mContinue: 'WEITER',
+      mSound: 'TON',
+      mMusic: 'MUSIK',
+      mSfx: 'EFFEKTE',
+      mCrt: 'BILDRÖHRE',
+      mBezel: 'RAHMEN',
+      mMouse: 'MAUS',
+      mMouseFollow: 'FOLGEN',
+      mMouseBall: 'TRACKBALL',
+      mSounds: 'KLANG',
+      mSoundsChip: 'CHIP',
+      mSoundsRec: 'AUFNAHME',
+      mAutofire: 'DAUERFEUER',
+      mLang: 'SPRACHE',
+      mClear: 'BESTENLISTE LÖSCHEN',
+      mCleared: 'GELÖSCHT',
+      mQuit: 'ZUR AUSWAHL',
+      on: 'AN', off: 'AUS',
+      // touch
+      touchMenu: 'MENÜ',
+      touchHint: 'Wischen zum Bewegen · Finger auf dem Glas feuert',
+      // how to (start page)
+      howTitle: 'SO GEHT’S',
+      howMove: 'Bewegen: Maus, Pfeiltasten/WASD, Gamepad oder am Handy mit dem Finger wischen (wie ein Trackball).',
+      howFire: 'Feuer: Leertaste, linke Maustaste, Gamepad A – oder Finger aufs Glas. Halten feuert dauernd.',
+      howWorm: 'Triffst du ein Glied des Schattenwurms, wird es zum Pilz und der Wurm teilt sich. Jedes Teil bekommt einen eigenen Kopf.',
+      howCreatures: 'Die Weberspinne frisst Pilze, der Sporenkäfer sät neue, der Nachtskorpion vergiftet sie: ein Wurm, der einen giftigen Pilz berührt, stürzt senkrecht herab.',
+      howKeys: 'P Pause · M Ton · F Vollbild · C Bildröhre · L Sprache · Esc Menü'
+    },
+    en: {
+      langName: 'ENGLISH',
+      tagline: 'Keep the glowing forest bright. The shadow worm is crawling down.',
+      versionTitle: 'CHOOSE YOUR VERSION',
+      versionOriginal: 'ORIGINAL',
+      versionOriginalSub: 'Like the 1981 cabinet: portrait pixel graphics, sound-chip effects, every wave in new colours.',
+      versionModern: 'MODERN',
+      versionModernSub: 'The same forest in 3D: glowing mushrooms, mist and fireflies, power-ups, combos and its own soundtrack.',
+      best: 'BEST',
+      remake: 'Remake by NIKOMEDIA 2026',
+      homage: 'A homage to the mushroom-field shooter by Dona Bailey and Ed Logg (1981). Non-commercial fan project; name, characters, graphics, sounds and music are original creations.',
+      soundOn: 'SOUND ON', soundOff: 'SOUND OFF',
+      crtOn: 'CRT ON', crtOff: 'CRT OFF',
+      paused: 'PAUSED',
+      pressStart: 'PRESS FIRE TO START',
+      tapToStart: 'TAP TO START',
+      clickToStart: 'CLICK TO START',
+      highScores: 'HIGH SCORES',
+      copyright: '© NIKOMEDIA 2026',
+      gameOver: 'GAME OVER',
+      player: 'PLAYER',
+      wave: 'WAVE',
+      ready: 'GO!',
+      enterName: 'YOUR NAME',
+      newRecord: 'NEW RECORD!',
+      bonus: 'BONUS',
+      loading: 'LOADING …',
+      modernFail: 'The modern version could not be loaded',
+      modernFailHelp: 'Your browser cannot provide 3D graphics (WebGL 2) right now. Restarting the browser or switching on hardware acceleration in its settings usually helps. The Original version runs without 3D.',
+      modernFailOriginal: 'PLAY ORIGINAL',
+      modernFailBack: 'BACK',
+      oScores: 'SCORES',
+      oWorm: 'SHADOW WORM',
+      oHead: 'HEAD',
+      oBody: 'BODY',
+      oSpider: 'WEAVER SPIDER',
+      oBeetle: 'SPORE BEETLE',
+      oScorp: 'NIGHT SCORPION',
+      oMush: 'MUSHROOM',
+      oBonus: 'BONUS EVERY 12000',
+      oDemo: 'DEMO',
+      oPress: 'FIRE = START',
+      oTap: 'TAP = START',
+      menuTitle: 'MENU',
+      mContinue: 'CONTINUE',
+      mSound: 'SOUND',
+      mMusic: 'MUSIC',
+      mSfx: 'EFFECTS',
+      mCrt: 'CRT',
+      mBezel: 'BEZEL',
+      mMouse: 'MOUSE',
+      mMouseFollow: 'FOLLOW',
+      mMouseBall: 'TRACKBALL',
+      mSounds: 'SOUNDS',
+      mSoundsChip: 'CHIP',
+      mSoundsRec: 'RECORDED',
+      mAutofire: 'AUTOFIRE',
+      mLang: 'LANGUAGE',
+      mClear: 'CLEAR HIGH SCORES',
+      mCleared: 'CLEARED',
+      mQuit: 'BACK TO START',
+      on: 'ON', off: 'OFF',
+      touchMenu: 'MENU',
+      touchHint: 'Swipe to move · a finger on the glass fires',
+      howTitle: 'HOW TO PLAY',
+      howMove: 'Move: mouse, arrow keys/WASD, gamepad, or swipe on your phone (like a trackball).',
+      howFire: 'Fire: space, left mouse button, gamepad A – or a finger on the glass. Hold for rapid fire.',
+      howWorm: 'Hit a segment of the shadow worm and it turns into a mushroom while the worm splits. Every piece grows its own head.',
+      howCreatures: 'The weaver spider eats mushrooms, the spore beetle sows new ones, the night scorpion poisons them: a worm that touches a poisoned mushroom plunges straight down.',
+      howKeys: 'P pause · M sound · F fullscreen · C CRT · L language · Esc menu'
+    }
+  };
+
+  var I18n = MYX.I18n = {
+    lang: 'en',
+    init: function () {
+      var saved = MYX.Settings.get('lang');
+      if (saved === 'de' || saved === 'en') this.lang = saved;
+      else this.lang = /^de/i.test((navigator.languages && navigator.languages[0]) || navigator.language || '') ? 'de' : 'en';
+      document.documentElement.lang = this.lang;
+    },
+    toggle: function () {
+      this.lang = this.lang === 'de' ? 'en' : 'de';
+      MYX.Settings.set('lang', this.lang);
+      document.documentElement.lang = this.lang;
+    },
+    set: function (l) { if (l !== this.lang) this.toggle(); },
+    add: function (lang, obj) { for (var k in obj) T[lang][k] = obj[k]; }
+  };
+  MYX.t = function (key) {
+    var v = T[I18n.lang][key];
+    return v === undefined ? (T.en[key] === undefined ? key : T.en[key]) : v;
+  };
+  I18n.init();
+})(MYX);
